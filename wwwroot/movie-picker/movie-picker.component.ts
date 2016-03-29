@@ -13,7 +13,10 @@ import { MoviePickerActionCreator } from "./movie-picker.actions";
 export class MoviePickerComponent {
     constructor(private moviePickerActionCreator: MoviePickerActionCreator) { }
 
-    stateOnChange = state => this.movies = state.movies;
+    storeOnChange = state => {
+        this.movies = state.movies;
+        alert(this.movies.length);
+    };
     
     ngOnInit = () => this.moviePickerActionCreator.all();
 

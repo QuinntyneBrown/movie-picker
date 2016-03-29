@@ -17,7 +17,7 @@ var app = (<any>angular.module("app.moviePicker", [
     "app.core"    
 ]));
 
-app.service("moviePickerActionCreator",["$location","dispatcher","moviePickerService","guid",MoviePickerActionCreator]);
+app.service("moviePickerActionCreator",["dispatcher","moviePickerService","guid",MoviePickerActionCreator]);
 app.service("moviePickerService", ["$q", "apiEndpoint", "fetch", MoviePickerService]);
 app.service("movieOverlayService", ["$compile", "$q", "$rootScope", "templateCache", "store", MovieOverlayService]);
 

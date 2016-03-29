@@ -19,12 +19,13 @@
         var cachedData = this.localStorageManager.get({ name: options.url });
         if (!cachedData) {
             this.fromService(options).then((results) => {
+                this.localStorageManager.put({ name: options.url, value: results });
                 deferred.resolve(results);
             }).catch((error: Error) => {
                 deferred.reject(error);
             });
         } else {
-            deferred.resolve(cachedData.value);
+            deferred.resolve(cachedData);
         }
         return deferred.promise;
     }

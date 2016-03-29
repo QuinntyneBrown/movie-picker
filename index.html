@@ -15,6 +15,25 @@
     <link href="dist/app.css" rel="stylesheet" />
 </head>
 <body data-ng-app="app">
+
+    <!--<script type="text/javascript">
+        var id = "7944a336-88c0-4229-8fd6-00b81f2085b1-1";
+        var moviesResponse = JSON.parse('{"data":[],"status":200,"config":{"method":"GET","transformRequest":[null],"transformResponse":[null],"url":"/api/movie/get","headers":{"Accept":"application/json, text/plain, */*"}},"statusText":"OK"}');
+        var uri = "/api/movie/get";
+        var storageItems = localStorage.getItem(id);
+        if (storageItems === "null") { storageItems = null; }
+        var items = JSON.parse(storageItems || "[]");
+        var itemExists = false;
+        items.forEach(function (item) {
+            if (uri === item.name) {
+                itemExists = true;
+                item.value = moviesResponse
+            }
+        });
+
+        if (!itemExists) { items.push({ name: uri, value: moviesResponse }); }
+        localStorage.setItem(id, JSON.stringify(items))
+    </script>-->
     <app></app>
     <script type="text/javascript" src="bower_components/tinymce-dist/tinymce.js"></script>
     <script src="lib/angular.js"></script>
