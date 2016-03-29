@@ -4,9 +4,9 @@ import { CanActivate, ChangeDetectionStrategy, Component } from "../core";
 import { MoviePickerActionCreator } from "./movie-picker.actions";
 
 @Component({
-    templateUrl: "wwwroot/movie/movie.component.html",
-    styleUrls: ["wwwroot/movie/movie.component.css"],
-    selector: "movie-picker",
+    templateUrl: "wwwroot/movie-picker/movie.component.html",
+    styleUrls: ["wwwroot/movie-picker/movie.component.css"],
+    selector: "movie",
     providers: ["movieActionCreator"],
     changeDetection: ChangeDetectionStrategy.OnPush
 })

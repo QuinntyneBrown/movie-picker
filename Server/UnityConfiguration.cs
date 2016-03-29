@@ -25,7 +25,9 @@ namespace Chloe.Server
             container.RegisterType<IEncryptionService, EncryptionService>();
             container.RegisterType<IIdentityService, IdentityService>();
             container.RegisterType<ICacheProvider, CacheProvider>();
-            container.RegisterType<IConfigurationProvider,ConfigurationProvider>();            
+            container.RegisterType<IConfigurationProvider,ConfigurationProvider>();
+            container.RegisterType<ITheatreService, TheatreService>();
+            container.RegisterType<IMovieService, MovieService>();         
             container.RegisterType<ILogger, Logger>();
 
             container.RegisterType<IUserService, UserService>(new HierarchicalLifetimeManager(),

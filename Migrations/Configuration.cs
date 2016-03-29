@@ -15,6 +15,8 @@ namespace Chloe.Migrations
         protected override void Seed(Chloe.Server.Data.ChloeContext context)
         {
             UserConfiguration.Seed(context);
+            TheatreConfiguration.Seed(context);
+            MovieConfiguration.Seed(context);
         }
     }
 }

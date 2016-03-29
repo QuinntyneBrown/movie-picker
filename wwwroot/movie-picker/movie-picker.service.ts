@@ -5,6 +5,6 @@ export class MoviePickerService extends BaseService {
         super($q, apiEndpoint, fetch)
     }
 
-    get baseUri() { return this.apiEndpoint.getBaseUrl() + "/moviePicker"; }
+    get baseUri() { return this.apiEndpoint.getBaseUrl() + "/movie"; }
 
 }

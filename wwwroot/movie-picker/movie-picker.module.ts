@@ -5,8 +5,8 @@ import { MoviePickerContainerComponent } from "./movie-picker-container.componen
 import { MoreMoviesComponent } from "./more-movies.component";
 import { MovieOverlayComponent } from "./movie-overlay.component";
 import { MovieComponent } from "./movie.component";
-import { WatchMovieComponent } from "./watch-movie.component";
-import { MovieOverlayService } from "./movie-overlay-service";
+import { SelectingAMovieComponent } from "./selecting-a-movie.component";
+import { MovieOverlayService } from "./movie-overlay.service";
 
 
 import { MoviePickerActionCreator } from "./movie-picker.actions";
@@ -19,14 +19,14 @@ var app = (<any>angular.module("app.moviePicker", [
 
 app.service("moviePickerActionCreator",["$location","dispatcher","moviePickerService","guid",MoviePickerActionCreator]);
 app.service("moviePickerService", ["$q", "apiEndpoint", "fetch", MoviePickerService]);
-app.service("movieOverlayService", ["$compile", "$q", "$rootScope", "", MovieOverlayService]);
+app.service("movieOverlayService", ["$compile", "$q", "$rootScope", "templateCache", "store", MovieOverlayService]);
 
 app.component(MoviePickerComponent);
 app.component(MoviePickerContainerComponent);
 app.component(MoreMoviesComponent);
 app.component(MovieOverlayComponent);
 app.component(MovieComponent);
-app.component(WatchMovieComponent);
+app.component(SelectingAMovieComponent);
 
 app.config(["reducersProvider", reducersProvider => {	
     for (var reducer in reducers) { reducersProvider.configure(reducers[reducer]); }

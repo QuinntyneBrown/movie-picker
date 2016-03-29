@@ -29,7 +29,8 @@ namespace Chloe.Server.Data
         
         public IRepository<User> Users { get { return GetStandardRepo<User>(); } }
         public IRepository<Role> Roles { get { return GetStandardRepo<Role>(); } }
-        
+        public IRepository<Movie> Movies { get { return GetStandardRepo<Movie>(); } }
+        public IRepository<Theatre> Theatres { get { return GetStandardRepo<Theatre>(); } }
 
         protected void ConfigureDbContext(IDbContext dbContext)
         {

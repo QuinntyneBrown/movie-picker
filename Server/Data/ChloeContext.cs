@@ -16,7 +16,8 @@ namespace Chloe.Server.Data
 
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
-
+        public DbSet<Movie> Movies { get; set; }
+        public DbSet<Theatre> Theatres { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
