@@ -1,2 +1,2 @@
-# movie-picker
-Movie Picker
+# chloe-seed
+Chloe Seed
