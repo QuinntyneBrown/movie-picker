@@ -471,12 +471,13 @@
     <TypeScriptCompile Include="wwwroot\movie-picker\movie-picker-container.component.ts" />
     <TypeScriptCompile Include="wwwroot\movie-picker\movie-picker.actions.ts" />
     <TypeScriptCompile Include="wwwroot\movie-picker\movie-picker.component.ts" />
-    <TypeScriptCompile Include="wwwroot\movie-picker\movie-picker.model.ts" />
+    <TypeScriptCompile Include="wwwroot\movie-picker\movie.model.ts" />
     <TypeScriptCompile Include="wwwroot\movie-picker\movie-picker.module.ts" />
     <TypeScriptCompile Include="wwwroot\movie-picker\movie-picker.reducers.ts" />
     <TypeScriptCompile Include="wwwroot\movie-picker\movie-picker.service.ts" />
     <TypeScriptCompile Include="wwwroot\movie-picker\movie.component.ts" />
     <TypeScriptCompile Include="wwwroot\movie-picker\selecting-a-movie.component.ts" />
+    <TypeScriptCompile Include="wwwroot\movie-picker\theatre.model.ts" />
     <TypeScriptCompile Include="wwwroot\registration\registration-page.component.ts" />
     <TypeScriptCompile Include="wwwroot\registration\registration.actions.ts" />
     <TypeScriptCompile Include="wwwroot\registration\registration.component.ts" />

@@ -9,6 +9,8 @@ namespace Chloe.Server.Models
             this.Theatres = new HashSet<Theatre>();
         }
 
+        public int? Priority { get; set; }
+
         public ICollection<Theatre> Theatres { get; set; }
     }
 }

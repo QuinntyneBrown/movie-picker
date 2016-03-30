@@ -1,5 +1,6 @@
 require("./movie-picker.component.css");
 
+import { Movie } from "./movie.model";
 import { CanActivate, ChangeDetectionStrategy, Component } from "../core";
 import { MoviePickerActionCreator } from "./movie-picker.actions";
 
@@ -13,14 +14,13 @@ import { MoviePickerActionCreator } from "./movie-picker.actions";
 export class MoviePickerComponent {
     constructor(private moviePickerActionCreator: MoviePickerActionCreator) { }
 
-    storeOnChange = state => {
-        this.movies = state.movies;
-        alert(this.movies.length);
-    };
+    storeOnChange = state => this.movies = state.movies
+        .filter((movie: Movie) => movie.priority)
+        .sort((a: Movie, b: Movie) => a.priority - b.priority);
     
     ngOnInit = () => this.moviePickerActionCreator.all();
 
     selectMovie = () => { }
   
-    movies: Array<any> = [];
+    movies: Array<Movie> = [];
 }

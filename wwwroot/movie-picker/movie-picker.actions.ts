@@ -11,9 +11,12 @@ export class MoviePickerActionCreator {
         });
         return newId;
     }
+
+    select = (options) => this.dispatcher.dispatch(new SelectMovieAction(options.entity));
 }
 
 
 
 export class AllMoviesAction { constructor(public id, public entities) { } }
 
+export class SelectMovieAction { constructor(public entity) { } }
