@@ -19,7 +19,7 @@ var app = (<any>angular.module("app.moviePicker", [
 
 app.service("moviePickerActionCreator",["dispatcher","moviePickerService","guid",MoviePickerActionCreator]);
 app.service("moviePickerService", ["$q", "apiEndpoint", "fetch", MoviePickerService]);
-app.service("movieOverlayService", ["$compile", "$q", "$rootScope", "templateCache", "store", MovieOverlayService]);
+app.service("movieOverlayService", ["$compile", "$q", "$rootScope", "$templateCache", "store", MovieOverlayService]);
 
 app.component(MoviePickerComponent);
 app.component(MoviePickerContainerComponent);
@@ -31,3 +31,5 @@ app.component(SelectingAMovieComponent);
 app.config(["reducersProvider", reducersProvider => {	
     for (var reducer in reducers) { reducersProvider.configure(reducers[reducer]); }
 }]);
+
+app.run(["movieOverlayService", (movieOverlayService: MovieOverlayService) => { }])
