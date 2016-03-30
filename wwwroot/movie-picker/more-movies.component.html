@@ -2,8 +2,8 @@
 
     <p>More movies:</p>
 
-    <select data-ng-show="!vm.currentId" data-ng-options="movie as movie.name for movie in vm.movies track by movie.id"
+    <select data-ng-options="movie as movie.name for movie in vm.movies track by movie.id"
             data-ng-model="vm.selected"
-            data-ng-change="vm.onSelectionChange(vm.selected.id)"
+            data-ng-change="vm.onSelectionChange(vm.selected)"
             data-ng-init='vm.selected = vm.movies[0]'></select>
 </div>    

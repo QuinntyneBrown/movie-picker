@@ -19,22 +19,37 @@ export class MoreMoviesComponent {
     }
 
     storeOnChange = state => {
-        this.currentId = state.currentId;
-        this.movies = state.movies
+
+        if (state.movie) {
+            this.currentId = state.movie.id;
+            
+        } else {
+
+        }
+        
+        this.movies = [this.empty];
+
+        state.movies
             .filter((movie: Movie) => !movie.priority)
             .sort((a: Movie, b: Movie) => {
                 var textA = a.name.toUpperCase();
                 var textB = b.name.toUpperCase();
                 return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-            });
-        if (!state.currentProviderId || state.currentProviderId == 0)
+            })
+            .forEach(movie => this.movies.push(movie));
+
+        if (!state.movie || state.movie.id || state.movie.id == 0)
             this.selected = this.empty;
 
-        if (this.selected && this.selected.id != state.currentProviderId)
+        if (this.selected && (state.movie && this.selected.id != state.movie.id))
             this.selected = this.empty;
     }
 
-    onSelectionChange = (id: number) => this.moviePickerActionCreator.select(id);
+    onSelectionChange = (movie: Movie) => {
+        this.moviePickerActionCreator.select({ entity: movie });
+        this.selected = movie;
+    };
+
     selected: Movie;
     empty: Movie;
     currentId: number;

@@ -11,6 +11,16 @@ body {
     padding-left:30px;
 }
 
+.button {
+    margin-top:15px;
+    margin-bottom:30px;
+    line-height:30px;
+    width:75px;
+    background-color:#FFF;
+    border: solid 1px;
+    cursor:pointer;
+}
+
 .input-field {
     padding-right:15px;
     padding-left:15px;
@@ -21,16 +31,6 @@ body {
 }
 
 
-
-.button {
-    margin-top:15px;
-    margin-bottom:30px;
-    line-height:30px;
-    width:75px;
-    background-color:#FFF;
-    border: solid 1px;
-    cursor:pointer;
-}
 
 
 
