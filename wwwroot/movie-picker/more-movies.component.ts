@@ -32,9 +32,7 @@ export class MoreMoviesComponent {
         state.movies
             .filter((movie: Movie) => !movie.priority)
             .sort((a: Movie, b: Movie) => {
-                var textA = a.name.toUpperCase();
-                var textB = b.name.toUpperCase();
-                return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+                return a.name.localeCompare(b.name);
             })
             .forEach(movie => this.movies.push(movie));
 
