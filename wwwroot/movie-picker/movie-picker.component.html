@@ -1,6 +1,8 @@
 <div class="movie-picker">
     <selecting-a-movie></selecting-a-movie>
 
-
+    <div data-ng-repeat="movie in vm.movies">
+        <h1>{{ ::movie.name }}</h1>
+    </div>
     <more-movies></more-movies>
 </div>

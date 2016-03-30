@@ -3,7 +3,7 @@
         window.onbeforeunload = () => localStorage.setItem(this.id, JSON.stringify(this.items))
     }
     
-    private id = "7944a336-88c0-4229-8fd6-00b81f2085b1-1";
+    private id = "785dc952-606d-4928-ae4f-1f0e4db35d7e";
 
     private _items = null;
 

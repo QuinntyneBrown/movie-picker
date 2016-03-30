@@ -12,6 +12,10 @@ namespace Chloe.Server.Dtos
             this.Name = entity.Name;
             this.Priority = entity.Priority;
             this.Theatres = new HashSet<TheatreDto>();
+            foreach(var theatre in entity.Theatres)
+            {
+                this.Theatres.Add(new TheatreDto(theatre));
+            }
         }
 
         public MovieDto()

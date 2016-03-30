@@ -15,8 +15,9 @@ export class MoviePickerComponent {
     constructor(private moviePickerActionCreator: MoviePickerActionCreator) { }
 
     storeOnChange = state => this.movies = state.movies
-        .filter((movie: Movie) => movie.priority)
-        .sort((a: Movie, b: Movie) => a.priority - b.priority);
+            .filter((movie: Movie) => movie.priority)
+            .sort((a: Movie, b: Movie) => a.priority - b.priority);
+    
     
     ngOnInit = () => this.moviePickerActionCreator.all();
 

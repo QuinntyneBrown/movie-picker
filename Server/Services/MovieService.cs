@@ -40,7 +40,9 @@ namespace Chloe.Server.Services
         public ICollection<MovieDto> Get()
         {
             ICollection<MovieDto> response = new HashSet<MovieDto>();
-            var entities = repository.GetAll().Where(x => x.IsDeleted == false).ToList();
+            var entities = repository.GetAll()
+                .Include(x=>x.Theatres)
+                .Where(x => x.IsDeleted == false).ToList();
             foreach(var entity in entities) { response.Add(new MovieDto(entity)); }    
             return response;
         }
