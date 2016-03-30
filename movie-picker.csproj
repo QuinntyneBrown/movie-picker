@@ -195,9 +195,6 @@
     <Content Include=".gitignore" />
     <Content Include="bower_components\angular-ui-tinymce\src\tinymce.js" />
     <Content Include="bower_components\tinymce-dist\tinymce.js" />
-    <Content Include="dist\app.css" />
-    <Content Include="dist\app.js" />
-    <Content Include="dist\app.templates.js" />
     <Content Include="gulpfile.js" />
     <Content Include="index.html" />
     <Content Include="lib\angular-route.js" />
@@ -387,6 +384,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="dist\" />
     <Folder Include="Server\Exceptions\" />
   </ItemGroup>
   <ItemGroup>

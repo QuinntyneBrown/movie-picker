@@ -11,11 +11,14 @@
 
     storeOnChanges = (state: any) => {
         this.movies = state.movies;
-        this.currentMovieId = state.movie.id;
-        if (state.movie.id) {
-            this.openAsync();
-        } else {
-            this.closeAsync();
+
+        if (state.movie) {
+            this.currentMovieId = state.movie.id;
+            if (state.movie.id) {
+                this.openAsync();
+            } else {
+                this.closeAsync();
+            }
         }
     }
 
